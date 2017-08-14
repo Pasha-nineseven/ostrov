@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>svg/burger</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Макеты" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="volshebnij_ostrov_index_02" transform="translate(-111.000000, -109.000000)" fill="#FFF9C4">
+            <g id="Шапка">
+                <g id="Все-товары" transform="translate(95.000000, 93.000000)">
+                    <path d="M16,17.5 C16,16.6715729 16.6762201,16 17.4908981,16 L33.5091019,16 C34.3325022,16 35,16.6657972 35,17.5 C35,18.3284271 34.3237799,19 33.5091019,19 L17.4908981,19 C16.6674978,19 16,18.3342028 16,17.5 Z M16,24.5 C16,23.6715729 16.6762201,23 17.4908981,23 L33.5091019,23 C34.3325022,23 35,23.6657972 35,24.5 C35,25.3284271 34.3237799,26 33.5091019,26 L17.4908981,26 C16.6674978,26 16,25.3342028 16,24.5 Z M16,31.5 C16,30.6715729 16.6762201,30 17.4908981,30 L33.5091019,30 C34.3325022,30 35,30.6657972 35,31.5 C35,32.3284271 34.3237799,33 33.5091019,33 L17.4908981,33 C16.6674978,33 16,32.3342028 16,31.5 Z" id="svg/burger"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

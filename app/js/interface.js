@@ -38,6 +38,10 @@ $(document).ready(function() {
 		$('.fs').styler();
 	}
 	
+
+	// $(".feedback-form form").submit(function() {
+ //        return validate();
+ //    })
 });
 
 
@@ -52,6 +56,30 @@ $(window).resize(function () {
 // });
 
 // functions
+// function validate() {
+//     var regExp =  /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+//     var userTxt = document.forms["feedback-form"]["user_txt"];
+//     var userMail = document.forms["feedback-form"]["user_email"];
+//     var valide = true;
+//     $(".input-wrap").removeClass('error-length').removeClass('error-mail');
+
+//     if (userTxt.value.length < 2) {
+//         valide = false;
+//         $(userTxt).closest(".input-wrap").addClass("error-length");
+//     }
+
+//     if (userMail.value.length < 2) {
+//         valide = false;
+//         $(userMail).closest(".input-wrap").addClass("error-length");
+//     }
+
+//     if (!regExp.test(userMail.value) && userMail.value.length >= 2) {
+//         valide = false;
+//         $(userMail).closest(".input-wrap").addClass("error-mail");
+//     }
+
+//     return valide;
+// }
 
 
 // links pages
