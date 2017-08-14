@@ -1,9 +1,43 @@
 $(document).ready(function() {
 	flexibility(document.documentElement);
-	// $("body").on("click", ".test", function(e){
-	// 	e.preventDefault();
-	// })
 
+	//ASIDE MENU
+	$("body").on("click", ".page-aside__item--submenu > .page-aside__link", function(e){
+		e.preventDefault();
+		// $(this).parents('.page-aside__item--submenu').toggleClass('active');
+		// $(this).next('.page-aside__list').slideToggle();
+
+		if ($(this).parents('.page-aside__item--submenu').hasClass("active")) {
+		  	$(this).parents('.page-aside__item--submenu').removeClass('active');
+		  	$(this).next('.page-aside__list').slideUp();
+		}
+		else{
+			$(this).parents('.page-aside__item--submenu').addClass('active');
+		  	$(this).next('.page-aside__list').slideDown();
+		}
+	})
+
+
+	//SLIDER-DEFAULT
+	if ($('.slider-default').length>0) {
+		$('.slider-default').slick({
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade:true,
+			dots:true,
+			arrows:true,
+			useTransform:true,
+			accessibility: false,
+		});
+	};
+
+
+	//SELECT-CUSTOM
+	if ($('.fs').length>0) {
+		$('.fs').styler();
+	}
+	
 });
 
 

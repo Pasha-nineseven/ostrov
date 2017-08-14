@@ -37,9 +37,12 @@ textarea,input {
 }
 
 a{
-	@include transition (color 0.3s linear);
+	transition :color 0.3s linear;
 	color: #0095da;
 	text-decoration: none;
+	&:hover{
+		color: #4bc2f9;
+	}
 }
 
 body {

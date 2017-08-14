@@ -13,4 +13,34 @@
 
 }
 
+@media screen and (max-width: 1320px){
+	.container-fluid{
+		padding: 0 20px;
+	}
+	body{
+		overflow-x: hidden;
+	}
+}
 
+@media screen and (max-width: 768px){
+	.workarea{
+		table{
+
+		}
+		tr,td{
+			display: block;
+		}
+		th{
+			display: none;
+		}
+		td{
+			text-align: right;
+			&:before{
+				content: attr(data-label);
+				float: left;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
