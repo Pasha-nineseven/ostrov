@@ -38,6 +38,8 @@ textarea,input {
 
 a{
 	@include transition (color 0.3s linear);
+	color: #0095da;
+	text-decoration: none;
 }
 
 body {
