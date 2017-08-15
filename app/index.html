@@ -20,23 +20,56 @@
 		<div class="layout layout--default">
 			<header class="page-header">
 				<div class="container-fluid">
-					<a href="#" class="top-logo"></a>
-					<nav class="top-nav">
-						<ul class="top-nav__list">
-							<li class="top-nav__item">
-								<a href="#" class="top-nav__link">О компании</a>
-							</li>
-							<li class="top-nav__item">
-								<a href="#" class="top-nav__link">Наши партнеры</a>
-							</li>
-							<li class="top-nav__item">
-								<a href="#" class="top-nav__link">Бренды</a>
-							</li>
-							<li class="top-nav__item">
-								<a href="#" class="top-nav__link">Контакты</a>
-							</li>
-						</ul>
-					</nav>
+					<div class="page-header__top">
+						<a href="#" class="top-logo"></a>
+						<nav class="top-nav">
+							<ul class="top-nav__list">
+								<li class="top-nav__item top-nav__item--sub">
+									<a href="#" class="top-nav__link">О компании</a>
+									<div class="top-nav-submenu">
+										<a href="#" class="top-nav-submenu__item">Контакты</a>
+										<a href="#" class="top-nav-submenu__item">Новости</a>
+										<a href="#" class="top-nav-submenu__item">Помощь</a>
+										<a href="#" class="top-nav-submenu__item">Наши партнеры</a>
+									</div>
+								</li>
+								<li class="top-nav__item">
+									<a href="#" class="top-nav__link">Наши партнеры</a>
+								</li>
+								<li class="top-nav__item">
+									<a href="#" class="top-nav__link">Бренды</a>
+								</li>
+								<li class="top-nav__item">
+									<a href="#" class="top-nav__link">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="top-info">
+							<div class="dream-group">
+								<i></i>
+								<span>Группа<br> компаний</span>
+							</div>
+							<div class="top-info__phone">
+								<a href="tel:+375175031586" class="top-info__number">+ 375 17 503-15-86</a>
+								<a href="#" class="top-info__buy">Купить в розницу</a>
+							</div>
+							<a href="#test-popup" class="btn-cart popup-inline-btn" data-effect="mfp-zoom-out">Связаться с нами</a>
+						</div>
+					</div>
+					<div class="page-header__bottom">
+						<a href="#" class="btn-catalog"><i></i>Все товары</a>
+						<div class="page-header__links">
+							<a href="#" class="page-header__cabinet"><i></i>Выход</a>
+							<a href="#" class="page-header__favorite"><i></i>Избранное</a>
+							<a href="#" class="page-header__cart"><i></i>Корзина</a>
+						</div>
+						<div class="page-header__search">
+							<form action="#" method="post" class="page-header__form">
+								<input type="text" placeholder="Поиск по артикулу или названию">
+								<input type="submit">
+							</form>
+						</div>
+					</div>
 				</div>
 			</header>
 			<div class="breadcrumbs">
@@ -299,9 +332,122 @@
 										</div>
 									</form>
 								</div>
+								<div class="tabs">
+								    <ul>
+								        <li><a href="#tab-1">Открытыи таб</a></li>
+								        <li><a href="#tab-2">Закрытыи таб</a></li>
+								        <li><a href="#tab-3">Закрытыи таб</a></li>
+								    </ul>
+
+								    <div id="tab-1">Инфо тест 1</div>
+								    <div id="tab-2">Инфо тест 2</div>
+								    <div id="tab-3">Инфо тест 3</div>
+								</div>
 								<h3>Списки</h3>
 								<p>Увы, многих владельцев паркетник разочаровал.</p>
+								<h4>Нумерованныи список</h4>
+								<ol>
+									<li>
+										Увы, многих владельцев паркетник разочаровал. Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+									</li>
+									<li>
+										Многих владельцев паркетник разочаровал. 
+									</li>
+									<li>
+										Увы, многих владельцев паркетник разочаровал. Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+									</li>
+								</ol>
+								<h4>Маркированнныи список</h4>
+								<ul>
+									<li>
+										Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе.
+									</li>
+									<li>
+										Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+									</li>
+									<li>
+										Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+									</li>
+								</ul>
+								<a href="#test-popup" class="btn popup-inline-btn" data-effect="mfp-zoom-out">Кнопка открывает попап</a>
+								<br>
+								<br>
+								<h4>Аккордеон</h4>
+								<div class="accordeon">
+									<div class="accordeon__item">
+										<a href="#" class="accordeon__link">Collapse - заголовок</a>
+										<div class="accordeon__info">
+											Test test test
+											Увы, многих владельцев паркетник разочаровал. Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+										</div>
+									</div>
+									<div class="accordeon__item active">
+										<a href="#" class="accordeon__link">Открытыи заголовок</a>
+										<div class="accordeon__info">
+											Увы, многих владельцев паркетник разочаровал. Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+										</div>
+									</div>
+									<div class="accordeon__item">
+										<a href="#" class="accordeon__link">Collapse - заголовок</a>
+										<div class="accordeon__info">
+											Test test test
+											Увы, многих владельцев паркетник разочаровал. Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+										</div>
+									</div>
+								</div>
+								<div class="news">
+									<h4>Новости</h4>
+									<div class="news__item">
+										<a href="#" class="news__img" style="background-image: url(img/content/av.jpg)"></a>
+										<div class="news__info">
+											<div class="news__date">24 марта 2017</div>
+											<a href="#" class="news__title">
+												Барахолка поможет выжить в жару: ретровентилятор, охлаждающая попона и раскладушка
+											</a>
+											Увы, многих владельцев паркетник разочаровал. Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+										</div>
+									</div>
+									<div class="news__item">
+										<div class="news__info">
+											<div class="news__date">24 марта 2017</div>
+											<a href="#" class="news__title">
+												Барахолка поможет выжить в жару: ретровентилятор, охлаждающая попона и раскладушка
+											</a>
+											Увы, многих владельцев паркетник разочаровал. Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+										</div>
+									</div>
+									<div class="news__item">
+										<div class="news__info">
+											<div class="news__date">24 марта 2017</div>
+											<a href="#" class="news__title">
+												Ретровентилятор, охлаждающая попона и раскладушка
+											</a>
+											Увы, многих владельцев паркетник разочаровал. Первый блин? Недавно в Минске стартовали продажи «Деревенщины» второго поколения. Корреспондент Onliner.by отправился в Альпы, чтобы познакомиться с новинкой поближе. 
+										</div>
+									</div>
+								</div>
+								<div class="paging">
+									<a href="#" class="paging__item paging__item--left"><i></i><span>Назад</span></a>
+									<a href="#" class="paging__item active"><span>1</span></a>
+									<a href="#" class="paging__item"><span>2</span></a>
+									<a href="#" class="paging__item"><span>3</span></a>
+									<a href="#" class="paging__item"><span>4</span></a>
+									<a href="#" class="paging__item"><span>5</span></a>
+									<a href="#" class="paging__item paging__item--more"><span>...</span></a>
+									<a href="#" class="paging__item"><span>25</span></a>
+									<a href="#" class="paging__item paging__item--right"><span>Вперед</span><i></i></a>
+								</div>
 								<!--end CONTENT-PART -->
+							</div>
+						</div>
+					</div>
+					<div class="test-section grey--sqheme">
+						<div class="container-fluid">
+							<div class="row cabinet">
+								<div class="col-md-3 cabinet__item">1</div>
+								<div class="col-md-3 cabinet__item">2</div>
+								<div class="col-md-3 cabinet__item">3</div>
+								<div class="col-md-3 cabinet__item">4</div>
 							</div>
 						</div>
 					</div>
@@ -365,6 +511,30 @@
 				</div>
 			</div>
 		</div><!-- END LAYOUT-->
+
+
+		<div id="test-popup" class="popup-inline mfp-with-anim mfp-hide">
+			<div class="popup-inline__title">
+				<h2>Всплывающее окно</h2>
+				<form action="#" method="POST" name="feedback-form-d">
+					<div class="input-wrap">
+						<div class="feedback-label">Имя:</div>
+						<input type="text">
+					</div>
+					<div class="input-wrap">
+						<div class="feedback-label">Эл. почта:</div>
+						<input type="email" name="user_email">
+					</div>
+					<div class="input-wrap" name="user_txt">
+						<div class="feedback-label">Текст сообщения:</div>
+						<textarea></textarea>
+					</div>
+					<div class="input-wrap input-wrap--submit">
+						<input type="submit" value="Отправить">
+					</div>
+				</form>
+			</div>
+		</div>
 
 		<script src="js/libs.min.js"></script>
 		<script src="js/interface.js"></script>

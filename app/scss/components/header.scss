@@ -1,6 +1,8 @@
+
+
 .page-header{
 	background: #fff;
-	padding: 38px 0 22px;
+	padding: 30px 0 22px;
 }
 
 .top-logo{
@@ -14,9 +16,13 @@
 
 .top-nav{
 	float: right;
+	    margin-top: 5px;
+	    position: relative;
+	    z-index: 5;
 }
 
 .top-nav__list{
+	    margin: 0;
 	margin-right: 0;
 	padding: 0;
 	list-style-type: none;
@@ -32,4 +38,246 @@
 .top-nav__link{
 	display: block;
 	font-size: 16px;
+	padding: 12px 0;
+	border-radius: 5px;
+	
+}
+
+.top-nav__item--sub{
+	margin-right: 0;
+	position: relative;
+	.top-nav__link{
+		padding-right: 20px;
+		padding-left: 10px;
+		position: relative;
+		&:after{
+			content: "";
+		    width: 8px;
+		    height: 5px;
+		    background: url(../img/svg/menu-arrow.svg) no-repeat;
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -1px;
+		    right: 5px;
+		    transition:all 0.3s ease;
+		}
+		&:hover{
+			background: #f3efe7;
+		}
+	}
+	&.active{
+		.top-nav__link{
+			background: #f3efe7;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			&:after{
+				transform: rotate(-180deg);
+				right: 7px;
+				margin-top: -2px;
+			}
+		}
+	}
+}
+
+.top-nav-submenu{
+	background: #f3efe7;
+	padding: 5px 10px 15px 10px;
+	position:absolute;
+	width: 100%;
+	border-radius: 5px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	display: none;
+
+}
+
+.top-nav-submenu__item{
+	margin-bottom: 10px;
+	display: block;
+	font-size: 13px;
+	&:last-child{
+		margin-bottom: 0;
+		
+	}
+}
+
+.page-header__top{
+	padding-bottom: 20px;
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.page-header__bottom{
+	clear: both;
+	.btn-catalog{
+		padding: 15px 53px 15px 53px;
+		margin-right: 20px;
+		float: left;
+		i{
+			left: 16px;
+			top: 23px;
+		}
+		&:after{
+			top: 15px;
+		}
+	}
+}
+
+.page-header__links{
+	float: right;
+	    padding-top: 9px;
+	a{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 24px;
+		padding-left: 43px;
+		position: relative;
+		font-size: 16px;
+		color: #000;
+		&:hover{
+			color: #0095da;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+		i{
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: -5px;
+			width: 32px;
+			height: 32px;
+			background: #ffc107;
+			border-radius: 50%;
+		}
+		&.page-header__cabinet{
+			i{
+				background: #ffc107 url(../img/svg/cabinet.svg) center no-repeat;
+			}
+		}
+		&.page-header__favorite{
+			i{
+				background: #ffc107 url(../img/svg/favorite.svg) center no-repeat;
+			}
+		}
+		&.page-header__cart{
+			i{
+				background: #ffc107 url(../img/svg/cart-menu.svg) center no-repeat;
+			}
+		}
+	}
+}
+
+
+.page-header__search{
+	overflow: hidden;
+	padding-right: 40px;
+	input[type="text"],
+	input[type="email"],
+	input[type="search"],
+	input[type="password"]{
+		width: 100%;
+		border: 1px solid #e5e2db;
+		border-radius: 3px;
+		background: #fff;
+		padding: 14px 65px 15px 20px;
+		    font-size: 16px;
+	}
+	input[type="submit"]{
+		position: absolute;
+		right: 15px;
+    	top: 14px;
+
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		vertical-align: middle;
+		border: 0;
+		background: url(../img/svg/search.svg) no-repeat;
+		text-indent: -9999em;
+		padding: 0;
+		transition:all 0.3s ease;
+		&:hover{
+			opacity: 0.4;
+		}
+	}
+}
+.page-header__form{
+	position: relative;
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 1px;
+		height: 30px;
+		background: #dedede;
+		position: absolute;
+		right: 53px;
+		top: 10px;
+	}
+}
+
+.top-info{
+	overflow: hidden;
+	padding-left: 59px;
+	margin-top: -3px;
+	margin-right: 65px;
+	.btn-cart{
+		border:1px solid #ffc107;
+		padding: 7px 14px;
+		position: relative;
+		top: 6px;
+	}
+}
+
+.dream-group{
+	display: table;
+	font-size: 13px;
+	float: left;
+	    margin-right: 72px;
+	span,i{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	i{
+		width: 57px;
+		height: 55px;
+		background: url(../img/content/dream.png) no-repeat; 	
+	}
+	span{
+		padding-left: 14px;
+	}
+}
+
+
+.top-info__phone{
+	text-align: right;
+	margin-right: 30px;
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	    margin-top: 8px;
+}
+.top-info__number{
+	color: #000;
+	display: block;
+	margin-bottom: 2px;
+}
+
+.top-info__buy{
+	font-size: 13px;
+	padding-left: 20px;
+	position: relative;
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 12px;
+		height: 17px;
+		background: url(../img/svg/place.svg) no-repeat;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
 }

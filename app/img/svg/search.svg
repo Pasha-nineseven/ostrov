@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>svg/search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Макеты" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="volshebnij_ostrov_index_02" transform="translate(-860.000000, -107.000000)" fill="#000000">
+            <g id="Шапка">
+                <g id="Поиск" transform="translate(306.000000, 93.000000)">
+                    <path d="M571.742945,30.3287318 L577.190639,35.7764257 C577.582129,36.1679159 577.585635,36.7991412 577.192388,37.1923882 C576.801864,37.5829124 576.16301,37.5772233 575.776426,37.1906393 L570.328732,31.7429453 C568.604861,33.1536347 566.40127,34 564,34 C558.477153,34 554,29.5228475 554,24 C554,18.4771525 558.477153,14 564,14 C569.522847,14 574,18.4771525 574,24 C574,26.4012702 573.153635,28.6048612 571.742945,30.3287318 Z M564,32 C568.418278,32 572,28.418278 572,24 C572,19.581722 568.418278,16 564,16 C559.581722,16 556,19.581722 556,24 C556,28.418278 559.581722,32 564,32 Z" id="svg/search"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
