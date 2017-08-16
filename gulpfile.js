@@ -32,6 +32,7 @@ gulp.task('scripts', function(){
         'app/libs/formstyler/jquery.formstyler.min.js',
         'app/libs/rTabs/jquery.responsiveTabs.js',
         'app/libs/magnific/jquery.magnific-popup.js',
+        'app/libs/inputmask/jquery.inputmask.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

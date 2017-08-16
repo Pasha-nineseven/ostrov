@@ -87,6 +87,29 @@ $(document).ready(function() {
 			$('.top-nav-submenu').fadeOut(0);
 		}
 	});
+
+
+	//REGISTRATION INPUT FILE
+	$(".choose-file [type=file]").on("change", function(){
+		// Name of file and placeholder
+		var file = this.files[0].name;
+		var dflt = $(this).attr("placeholder");
+		if($(this).val()!=""){
+			$(this).next().find('.label-title').text(file);
+		} else {
+			$(this).next().find('.label-title').text(dflt);
+		}
+	});
+
+	$('.btn').click(function(){
+	$('.btn').attr('disabled', 'disabled');
+	})
+
+
+	//PHONE-MASK
+    if ($('.phone-mask').length>0) {
+      $('.phone-mask').inputmask("+999 (99) 999-99-99");
+    };
 });
 
 
@@ -128,16 +151,17 @@ $(window).resize(function () {
 
 
 // links pages
-// $('body').append(
-// 	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
-// 		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
-// 	<style> \
-// 		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
-// 		#pages a { text-decoration: none; } \
-// 		#pages li { margin: 5px 0; } \
-// 	</style> \
-// 	<ol id="pages"> \
-// 		<li><a href="about.html">About</a></li> \
-// 		<li><a href="index.html">Index</a></li> \
-// 	</ol> \
-// </div>');
+$('body').append(
+	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
+		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
+	<style> \
+		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
+		#pages a { text-decoration: none; } \
+		#pages li { margin: 5px 0; } \
+	</style> \
+	<ol id="pages"> \
+		<li><a href="index.html">Index</a></li> \
+		<li><a href="cabinet.html">Cabinet</a></li> \
+		<li><a href="registration.html">Registration</a></li> \
+	</ol> \
+</div>');
