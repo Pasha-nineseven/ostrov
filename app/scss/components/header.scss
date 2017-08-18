@@ -7,6 +7,7 @@
 
 .top-logo{
 	float: left;
+	margin: 0;
 	display: block;
 	text-decoration: none;
 	width: 151px;
@@ -139,6 +140,12 @@
 		color: #000;
 		&:hover{
 			color: #0095da;
+			i{
+				&:before{
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
 		}
 		&:last-child{
 			margin-right: 0;
@@ -152,6 +159,21 @@
 			height: 32px;
 			background: #ffc107;
 			border-radius: 50%;
+			&:before{
+				position: absolute;
+			    width: 36px;
+			    height: 36px;
+			    border-radius: 50%;
+			    content: '';
+				top: -2px;
+				left: -2px;
+				padding: 7px;
+				// box-shadow: 0 0 0 2px red;
+				opacity: 0;
+				transition:all 0.3s ease;
+				transform: scale(0.8);
+				box-shadow: 0 0 0 2px #ffc107;
+			}
 		}
 		&.page-header__cabinet{
 			i{

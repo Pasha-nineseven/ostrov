@@ -75,12 +75,12 @@
 			<div class="breadcrumbs">
 				<div class="container-fluid">
 					<a href="#" class="breadcrumbs__item">Главная</a>
-					<span class="breadcrumbs__item">Регистрация</span>
+					<span class="breadcrumbs__item">Личный кабинет</span>
 				</div>
 			</div>
 			<div class="page-title">
 				<div class="container-fluid">
-					<h1>Регистрация</h1>
+					<h1>Личныи кабинет</h1>
 				</div>
 			</div>
 			<div class="wrapper">
@@ -150,60 +150,93 @@
 							</div>
 							<div class="col-sm-9 page-info">
 								<!-- CONTENT-PART -->
-								<div class="registration-form">
-									<div class="registration-form__title">
-										<h4>Необходимо заполнить все поля</h4>
+								<div class="row">
+									<div class="col-sm-9 cabinet-list">
+										<div class="cabinet-links">
+											<div class="cabinet-links__item">
+										    	<a href="#">Личные данные</a>
+										    </div>
+										    <div class="cabinet-links__item">
+										    	<a href="#">Избранное</a>
+										    </div>
+										    <div class="cabinet-links__item">
+										    	<a href="#" class="active">История заказов</a>
+										    </div>
+										    <div class="cabinet-links__item">
+										    	<a href="#">Подписка</a>
+										    </div>
+										</div>
+										<div class="cabinet-list__inner">
+											<div class="cabinet-history">
+												<table>
+													<tr>
+														<th>Номер заказа</th>
+														<th>Дата заказа</th>
+														<th>Общая стоимость заказа</th>
+														<th>Товаров в заказе</th>
+														<th>Повторить заказ</th>
+													</tr>
+													<tr>
+														<td><span class="cabinet-history__number">412356</span></td>
+														<td>23 сентября 2017</td>
+														<td>1 200.00 руб.</td>
+														<td>3</td>
+														<td>
+															<a href="#" class="repeat-order"></a>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="cabinet-history__number">234233453</span></td>
+														<td>23 июня 2017</td>
+														<td>450.20 руб.</td>
+														<td>2</td>
+														<td>
+															<a href="#" class="repeat-order"></a>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="cabinet-history__number">412356</span></td>
+														<td>23 сентября 2017</td>
+														<td>1 200.00 руб.</td>
+														<td>3</td>
+														<td>
+															<a href="#" class="repeat-order"></a>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="cabinet-history__number">234233453</span></td>
+														<td>23 июня 2017</td>
+														<td>450.20 руб.</td>
+														<td>2</td>
+														<td>
+															<a href="#" class="repeat-order"></a>
+														</td>
+													</tr>
+												</table>
+											</div>
+										</div>
 									</div>
-									<form action="#" method="post">
-										<div class="input-wrap necessarily">
-											<div class="input-wrap__in">
-												<label class="input-wrap__label">Название юр. лица:</label>
-												<input type="text">
+									<div class="col-sm-3 cabinet-manager">
+										<div class="cabinet-manager__inner">
+											<div class="cabinet-manager__title">
+												Ваш менеджер
 											</div>
-										</div>
-										<div class="input-wrap necessarily">
-											<div class="input-wrap__in">
-												<label class="input-wrap__label">Эл. почта:</label>
-												<input type="text">
-											</div>
-										</div>
-										<div class="input-wrap necessarily input-wrap--phone">
-											<div class="input-wrap__in">
-												<div class="input-wrap--phone__wrapper">
-													<label class="input-wrap__label">Телефон:</label>
-													<input type="text" placeholder="+___ (__) ___-__-__" class="phone-mask">
+											<div class="cabinet-manager__item">
+												<div class="cabinet-manager__label">Имя</div>
+												<div class="cabinet-manager__person">
+													Константин Александрович
 												</div>
 											</div>
-										</div>
-										<div class="input-wrap necessarily">
-											<div class="input-wrap__in">
-												<label class="input-wrap__label">Контактное лицо:</label>
-												<input type="text">
+											<div class="cabinet-manager__item">
+												<div class="cabinet-manager__label">Телефон</div>
+												+375 29 683-43-43
+											</div>
+											<div class="cabinet-manager__item">
+												<div class="cabinet-manager__label">Эл. почта</div>
+												<a href="mailto:volshebniy.ostrov@gmail.com">volshebniy.ostrov@gmail.com</a>
 											</div>
 										</div>
-										<div class="input-wrap necessarily">
-											<div class="download-wrap">
-												Скачайте и заполните файл: <a href="img/content/top-logo.png" class="download-item download-item--doc" download="">
-												<i></i>
-												Реквизиты <span>(doc, 2.1мб)</span>
-												</a>
-												или загрузите свой файл с реквизитами (DOC, XLS, PDF)
-											</div>
-										</div>
-										<div class="choose-file">
-										  	<input type="file">
-										  	<label>
-										  		<span class="label-inner">
-										  			<span class="label-title">Прикрепите фаил с реквизитами</span>
-										  			<span class="choose-file-message">
-											  			Перетащите в поле или <span class="choose-file-message-in">выберите с диска</span>
-											  		</span>
-										  		</span>
-										  		
-										  	</label>
-										</div>
-										<input type="submit" value="Отправить анкету">
-									</form>
+									</div>
 								</div>
 								<!--end CONTENT-PART -->
 							</div>

@@ -101,15 +101,100 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.btn').click(function(){
-	$('.btn').attr('disabled', 'disabled');
-	})
+
 
 
 	//PHONE-MASK
     if ($('.phone-mask').length>0) {
-      $('.phone-mask').inputmask("+999 (99) 999-99-99");
+    	$('.phone-mask').inputmask("+999 (99) 999-99-99");
     };
+
+
+
+
+    //CART PLUS-MINUS
+    if ($('.cart-table').length>0) {
+    	$( ".cart-count__input" ).each(function( index ) {
+		  	if ($(this).parents('.cart-count').find('.cart-count__input').val()<=1) {
+	    		$(this).parents('.cart-count').find($('.cart-minus')).addClass('disable');
+	    	}
+		});
+    
+	    $('.cart-minus').click(function () {
+	        var $input = $(this).parent().find('.cart-count__input');
+	        var count = parseInt($input.val()) - 1;
+	        count = count < 1 ? 1 : count;
+	        $input.val(count);
+	        $input.change();
+
+	        if ($(this).parents('.cart-count').find('.cart-count__input').val()<=1) {
+	    		$(this).parents('.cart-count').find($('.cart-minus')).addClass('disable');
+	    	}
+	    	else{
+	    		$(this).parents('.cart-count').find($('.cart-minus')).removeClass('disable');
+	    	}
+	        return false;
+	    });
+	 
+	    $('.cart-plus').click(function () {
+	        var $input = $(this).parents('.cart-count').find('.cart-count__input');
+	        $input.val(parseInt($input.val()) + 1);
+	        $input.change();
+
+	        if ($(this).parents('.cart-count').find('.cart-count__input').val()>=1) {
+	        	$(this).parents('.cart-count').find($('.cart-minus')).removeClass('disable');
+	    	}
+	        return false;
+	    });
+    }
+
+    //CART DELETE
+    $("body").on("click", ".cart-delete", function(e){
+		e.preventDefault();
+		$(this).parents('tr').remove();
+	})
+
+
+	//MAIN SLIDER
+	if ($('.main-slider').length>0) {
+		$('.main-slider').slick({
+			infinite: false,
+			slidesToShow: 1,
+			fade: true,
+			lazyLoad: 'progressive',
+			useTransform:true,
+			"accessibility": false,
+			dots:false,
+  			// responsive: [
+			  //   {
+			  //     breakpoint: 901,
+			  //     settings: {
+			  //       infinite: false,
+					// slidesToShow: 1,
+					// fade: true,
+					// lazyLoad: 'progressive',
+					// useTransform:true,
+					// "accessibility": false,
+					// nextArrow: $('.main-slider__right'),
+		  	// 		prevArrow: $('.main-slider__left'),
+		  	// 		dots:true,
+		  	// 		arrows:true,
+			  //     }
+			  //   },
+		   //  ]
+		});
+	}
+
+
+	//BRANDS-ITEM
+	if ($('.brands').length>0){
+		$('.brands').masonry({
+			// options
+			itemSelector: '.brands__item',
+			//columnWidth: 200
+			// horizontalOrder: true,
+		});
+	}
 });
 
 
@@ -160,8 +245,14 @@ $('body').append(
 		#pages li { margin: 5px 0; } \
 	</style> \
 	<ol id="pages"> \
-		<li><a href="index.html">Index</a></li> \
-		<li><a href="cabinet.html">Cabinet</a></li> \
-		<li><a href="registration.html">Registration</a></li> \
+		<li><a href="about.html">О нас</a></li> \
+		<li><a href="index.html">Главная</a></li> \
+		<li><a href="registration.html">Регистрация</a></li> \
+		<li><a href="cart.html">Корзина</a></li> \
+		<li><a href="cart-empty.html">Корзина пустая</a></li> \
+		<li><a href="brands.html">Бренды</a></li> \
+		<li><a href="cabinet.html">Личкаб</a></li> \
+		<li><a href="personal-data.html">Личкаб-данные</a></li> \
+		<li><a href="personal-history.html">Личкаб-история</a></li> \
 	</ol> \
 </div>');

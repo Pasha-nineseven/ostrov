@@ -33,6 +33,7 @@ gulp.task('scripts', function(){
         'app/libs/rTabs/jquery.responsiveTabs.js',
         'app/libs/magnific/jquery.magnific-popup.js',
         'app/libs/inputmask/jquery.inputmask.js',
+        'app/libs/masonry/masonry.pkgd.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
