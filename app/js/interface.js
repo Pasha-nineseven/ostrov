@@ -195,6 +195,37 @@ $(document).ready(function() {
 			// horizontalOrder: true,
 		});
 	}
+
+
+	//PRODUCT-SLIDER
+	if ($('.product-slider-wrap').length>0) {
+		$('.product__slider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots:false,
+			fade: true,
+			asNavFor: '.product__thumb'
+		});
+		$('.product__thumb').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.product__slider',
+			dots: false,
+			centerMode: true,
+			focusOnSelect: true,
+			infinite:true,
+			arrows: false,
+		});
+		$('.product__thumb .slick-slide').eq(0).addClass('slick-active');
+		$('.product__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			var mySlideNumber = nextSlide;
+		 	$('.product__thumb .slick-slide').removeClass('slick-active');
+		 	$('.product__thumb .slick-slide').eq(mySlideNumber).addClass('slick-active');
+		});
+
+	};
+
 });
 
 
@@ -254,5 +285,6 @@ $('body').append(
 		<li><a href="cabinet.html">Личкаб</a></li> \
 		<li><a href="personal-data.html">Личкаб-данные</a></li> \
 		<li><a href="personal-history.html">Личкаб-история</a></li> \
+		<li><a href="product.html">Товар 1</a></li> \
 	</ol> \
 </div>');
