@@ -34,6 +34,8 @@ gulp.task('scripts', function(){
         'app/libs/magnific/jquery.magnific-popup.js',
         'app/libs/inputmask/jquery.inputmask.js',
         'app/libs/masonry/masonry.pkgd.js',
+        'app/libs/jTruncate/jtruncate.js',
+        'app/libs/m-scrollbar/jquery.mCustomScrollbar.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

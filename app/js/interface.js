@@ -277,6 +277,28 @@ $(document).ready(function() {
 		$(this).next('.all-goods-submenu').slideToggle();
 		//$('.mobile-menu__list').slideToggle();
 	})
+
+
+	//TEXT-TRUNCATE
+	$('.product-info__toggle').jTruncate({
+        length: 180,
+        minTrail: 0,
+        moreText: "Подробнее",
+        lessText: "Скрыть",
+        moreAni: 10,
+        lessAni: 10,
+	});
+
+	//SCROLL-CUSTOM
+	if ($(".product-info__toggle").length>0) {
+		$(".product-info__toggle").mCustomScrollbar();
+	}
+
+	//CATALOG-LABEL REMOVE
+    $("body").on("click", ".catalog-labels__close", function(e){
+		e.preventDefault();
+		$(this).parents('.catalog-labels__item').remove();
+	})
 });
 
 
@@ -348,6 +370,8 @@ $('body').append(
 		<li><a href="cabinet.html">Личкаб</a></li> \
 		<li><a href="personal-data.html">Личкаб-данные</a></li> \
 		<li><a href="personal-history.html">Личкаб-история</a></li> \
-		<li><a href="product.html">Товар 1</a></li> \
+		<li><a href="product.html">Товар</a></li> \
+		<li><a href="catalog1.html">Каталог1</a></li> \
+		<li><a href="catalog2.html">Каталог2</a></li> \
 	</ol> \
 </div>');
