@@ -208,12 +208,13 @@
 			<div class="breadcrumbs">
 				<div class="container-fluid">
 					<a href="#" class="breadcrumbs__item">Главная</a>
-					<span class="breadcrumbs__item">Личный кабинет</span>
+					<a href="#" class="breadcrumbs__item">Личный кабинет</a>
+					<span class="breadcrumbs__item">Заказ №5123512</span>
 				</div>
 			</div>
 			<div class="page-title">
 				<div class="container-fluid">
-					<h1>Личныи кабинет</h1>
+					<h1>Заказ 5123512 от 23 сентября 2017</h1>
 				</div>
 			</div>
 			<div class="wrapper">
@@ -283,32 +284,94 @@
 							</div>
 							<div class="col-sm-9 page-info">
 								<!-- CONTENT-PART -->
-								<div class="row cabinet-wrap">
-									<div class="col-md-3 col-xs-6 cabinet__item cabinet__item--personal">
-										<a href="#" class="cabinet__inner">
-											<div class="cabinet__img"></div>
-											<div class="cabinet__txt">Личные данные</div>
-										</a>
-									</div>
-									<div class="col-md-3 col-xs-6 cabinet__item cabinet__item--favorite">
-										<a href="#" class="cabinet__inner">
-											<div class="cabinet__img"></div>
-											<div class="cabinet__txt">Избранное</div>
-										</a>
-									</div>
-									<div class="col-md-3 col-xs-6 cabinet__item cabinet__item--history">
-										<a href="#" class="cabinet__inner">
-											<div class="cabinet__img"></div>
-											<div class="cabinet__txt">История заказов</div>
-										</a>
-									</div>
-									<div class="col-md-3 col-xs-6 cabinet__item cabinet__item--subscribe">
-										<a href="#" class="cabinet__inner">
-											<div class="cabinet__img"></div>
-											<div class="cabinet__txt">Подписка</div>
-										</a>
-									</div>
-								</div>
+								<div class="order">
+									<h4>Заказ</h4>
+									<form action="#" method="post">
+										<table class="cart-table">
+											<tbody>
+												<tr>
+													<th>Товар</th>
+													<th>Цена</th>
+													<th>Кол-во</th>
+													<th>Итого</th>
+												</tr>
+												<tr>
+													<td class="cart-img">
+														<div class="cart-img__wrap">
+															<a href="#" class="cart-img__link">
+																<img src="img/content/av.jpg" alt="">
+															</a>
+															<a href="#" class="cart-title">
+																GPYG0 Пудель глазастик
+															</a>
+														</div>
+													</td>
+													<td>
+														<span class="cart-price">
+															23.70 руб.
+														</span>
+													</td>
+													<td>
+														1
+													</td>
+													<td>
+														<div class="cart-total">
+															23.70 руб.
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="cart-img">
+														<div class="cart-img__wrap">
+															<a href="#" class="cart-img__link">
+																<img src="img/content/i1.jpg" alt="">
+															</a>
+															<a href="#" class="cart-title">
+																Набор для пускания мыльных пузырей "Мега-Пузырище"
+															</a>
+														</div>
+													</td>
+													<td>
+														<span class="cart-price">
+															23.70 руб.
+														</span>
+													</td>
+													<td>
+														1
+													</td>
+													<td>
+														<div class="cart-total">
+															23.70 руб.
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="order-method">
+											<div class="order-method__item">
+												<div class="order-method__title">Адресные данные</div>
+												Респубика Беларусь, г. Минск, ул. Сурганова, д. 45
+											</div>
+											<div class="order-method__item">
+												<div class="order-method__title">Способ доставки</div>
+												Доставка транспортом компании
+											</div>
+											<div class="order-method__item">
+												<div class="order-method__title">Оплата</div>
+												Безналичный расчет
+											</div>
+										</div>
+										<div class="order-back-wrap">
+											<a href="#" class="order-back">Вернуться к истории заказов</a>
+										</div>
+										<div class="issue-order">
+											<div class="order-total">
+												<div class="order-total__title">Итоговая стоимость</div>
+												<div class="order-total__sum">54.80 руб.</div>
+											</div>
+										</div>
+									</form>
+								</div>	
 								<!--end CONTENT-PART -->
 							</div>
 						</div>
@@ -373,6 +436,7 @@
 				</div>
 			</div>
 		</div><!-- END LAYOUT-->
+
 
 
 		<div id="test-popup" class="popup-inline mfp-with-anim mfp-hide">

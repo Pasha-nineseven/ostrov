@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1074px" height="165px" viewBox="0 0 1074 165" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>svg/bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Макеты" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" opacity="0.25" stroke-linejoin="round">
+        <g id="volshebnij_ostrov_index_02" transform="translate(-174.000000, -2035.000000)" stroke-width="3">
+            <g id="Получить-каталог" transform="translate(169.000000, 1623.000000)">
+                <g id="svg/bg" transform="translate(554.393248, 494.405445) rotate(-30.000000) translate(-554.393248, -494.405445) translate(88.893248, 192.905445)">
+                    <path d="M693.762196,495.351597 C693.762196,487.067326 687.046468,480.351597 678.762196,480.351597 C670.477925,480.351597 663.762196,487.067326 663.762196,495.351597" id="Oval-8" stroke="#FFC107" transform="translate(678.762196, 487.851597) rotate(-330.000000) translate(-678.762196, -487.851597) "></path>
+                    <path d="M279.617417,133.052854 C279.617417,127.530006 275.140264,123.052854 269.617417,123.052854 C264.094569,123.052854 259.617417,127.530006 259.617417,133.052854" id="Oval-8" stroke="#FFC107" transform="translate(269.617417, 128.052854) rotate(-275.000000) translate(-269.617417, -128.052854) "></path>
+                    <path d="M716.718179,360.961681 C716.718179,355.438833 712.241027,350.961681 706.718179,350.961681 C701.195332,350.961681 696.718179,355.438833 696.718179,360.961681" id="Oval-8" stroke="#FFC107" transform="translate(706.718179, 355.961681) rotate(-275.000000) translate(-706.718179, -355.961681) "></path>
+                    <path d="M903.028025,597.138796 C903.028025,591.892091 898.77473,587.638796 893.528025,587.638796 C888.28132,587.638796 884.028025,591.892091 884.028025,597.138796" id="Oval-8" stroke="#AE25B5" transform="translate(893.528025, 592.388796) rotate(-431.000000) translate(-893.528025, -592.388796) "></path>
+                    <path d="M514.156339,350.684313 C514.156339,345.437608 509.903044,341.184313 504.656339,341.184313 C499.409634,341.184313 495.156339,345.437608 495.156339,350.684313" id="Oval-8" stroke="#AE25B5" transform="translate(504.656339, 345.934313) rotate(-431.000000) translate(-504.656339, -345.934313) "></path>
+                    <path d="M390.951258,186.402281 C390.951258,178.394152 384.459387,171.902281 376.451258,171.902281 C368.443129,171.902281 361.951258,178.394152 361.951258,186.402281" id="Oval-8" stroke="#07FF98" transform="translate(376.451258, 179.152281) rotate(-346.000000) translate(-376.451258, -179.152281) "></path>
+                    <path d="M829.585738,566.665075 C829.585738,558.656947 823.093867,552.165075 815.085738,552.165075 C807.077609,552.165075 800.585738,558.656947 800.585738,566.665075" id="Oval-8" stroke="#07FF98" transform="translate(815.085738, 559.415075) rotate(-346.000000) translate(-815.085738, -559.415075) "></path>
+                    <path d="M407.711617,328.858984 L427.711617,328.858984" id="Line" stroke="#0095DA"></path>
+                    <path d="M183.5,198.5 L203.5,198.5" id="Line" stroke="#20FF07"></path>
+                    <path d="M898.141016,533.858984 L928.141016,533.858984" id="Line" stroke="#07FF98"></path>
+                    <path d="M1.22213351e-12,102.5 L30,102.5" id="Line" stroke="#07FF98"></path>
+                    <path d="M724.935935,433.858984 L754.935935,433.858984" id="Line" stroke="#07FF98"></path>
+                    <path d="M563.692379,433.141016 L593.692379,433.141016" id="Line" stroke="#FFC107"></path>
+                    <path d="M95,46.5 L125,46.5" id="Line" stroke="#FFC107"></path>
+                    <circle id="Oval-9" stroke="#20FF07" cx="479.871871" cy="377.67245" r="7.5"></circle>
+                    <circle id="Oval-9" stroke="#0095DA" cx="10" cy="5" r="5"></circle>
+                    <circle id="Oval-9" stroke="#AE25B5" cx="461.250093" cy="276.756443" r="10"></circle>
+                    <circle id="Oval-9" stroke="#AE25B5" cx="244" cy="255" r="10"></circle>
+                    <circle id="Oval-9" stroke="#0095DA" cx="821.428203" cy="448.909656" r="10"></circle>
+                    <rect id="Rectangle-11" stroke="#0095DA" x="920.339746" y="489.320508" width="10" height="10"></rect>
+                    <rect id="Rectangle-11" stroke="#0095DA" x="334.621778" y="292.30127" width="14" height="14"></rect>
+                    <rect id="Rectangle-11" stroke="#20FF07" x="565.26933" y="284.320508" width="14" height="14"></rect>
+                    <rect id="Rectangle-11" stroke="#FFC107" x="79.5839931" y="108.064065" width="20" height="20"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -299,6 +299,38 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).parents('.catalog-labels__item').remove();
 	})
+
+
+	//POPUPLAR SLIDER
+	if ($('.popular__slider').length>0) {
+		$('.popular__slider').slick({
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			lazyLoad: 'progressive',
+			useTransform:true,
+			"accessibility": false,
+			dots:false,
+			arrows:true
+  			// responsive: [
+			  //   {
+			  //     breakpoint: 901,
+			  //     settings: {
+			  //       infinite: false,
+					// slidesToShow: 1,
+					// fade: true,
+					// lazyLoad: 'progressive',
+					// useTransform:true,
+					// "accessibility": false,
+					// nextArrow: $('.main-slider__right'),
+		  	// 		prevArrow: $('.main-slider__left'),
+		  	// 		dots:true,
+		  	// 		arrows:true,
+			  //     }
+			  //   },
+		   //  ]
+		});
+	}
 });
 
 
@@ -373,5 +405,8 @@ $('body').append(
 		<li><a href="product.html">Товар</a></li> \
 		<li><a href="catalog1.html">Каталог1</a></li> \
 		<li><a href="catalog2.html">Каталог2</a></li> \
+		<li><a href="order.html">Заказ</a></li> \
+		<li><a href="order2.html">Заказ 2</a></li> \
+		<li><a href="page-404.html">404</a></li> \
 	</ol> \
 </div>');
