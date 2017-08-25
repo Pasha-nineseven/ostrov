@@ -1,6 +1,27 @@
 $(document).ready(function() {
 	flexibility(document.documentElement);
 
+	//BTN-CATALOG
+	$("body").on("click", ".btn-catalog", function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$('.catalog-overlay').fadeToggle();
+		$('.page-header__catalog').fadeToggle();
+	})
+	$("body").on("click", ".catalog-overlay", function(e){
+		e.preventDefault();
+		$(this).fadeOut();
+		$('.page-header__catalog').fadeOut();
+		$('.catalog-overlay').toggle();
+
+		$('.btn-catalog').removeClass('active');
+	})
+
+	//SCROLL-CUSTOM
+	if ($(".page-header__catalog").length>0) {
+		$(".page-header__catalog").mCustomScrollbar();
+	}
+
 	//ASIDE MENU
 	$("body").on("click", ".page-aside__item--submenu > .page-aside__link", function(e){
 		e.preventDefault();
@@ -330,6 +351,100 @@ $(document).ready(function() {
 			  //   },
 		   //  ]
 		});
+	}
+
+	//BENEFITS SLIDER
+	if ($('.benefits__slider').length>0) {
+		$('.benefits__slider').slick({
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			lazyLoad: 'progressive',
+			useTransform:true,
+			"accessibility": false,
+			dots:false,
+			arrows:true
+  			// responsive: [
+			  //   {
+			  //     breakpoint: 901,
+			  //     settings: {
+			  //       infinite: false,
+					// slidesToShow: 1,
+					// fade: true,
+					// lazyLoad: 'progressive',
+					// useTransform:true,
+					// "accessibility": false,
+					// nextArrow: $('.main-slider__right'),
+		  	// 		prevArrow: $('.main-slider__left'),
+		  	// 		dots:true,
+		  	// 		arrows:true,
+			  //     }
+			  //   },
+		   //  ]
+		});
+	}
+
+	//MAIN-BRENDS SLIDER
+	if ($('.main-brends__slider').length>0) {
+		$('.main-brends__slider').slick({
+			infinite: true,
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			lazyLoad: 'progressive',
+			useTransform:true,
+			"accessibility": false,
+			dots:false,
+			arrows:true
+  			// responsive: [
+			  //   {
+			  //     breakpoint: 901,
+			  //     settings: {
+			  //       infinite: false,
+					// slidesToShow: 1,
+					// fade: true,
+					// lazyLoad: 'progressive',
+					// useTransform:true,
+					// "accessibility": false,
+					// nextArrow: $('.main-slider__right'),
+		  	// 		prevArrow: $('.main-slider__left'),
+		  	// 		dots:true,
+		  	// 		arrows:true,
+			  //     }
+			  //   },
+		   //  ]
+		});
+	}
+
+	//CATALOG-FILTER-LINK
+	$("body").on("click", ".catalog-filter-link", function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$(this).parents('.page-title').toggleClass('active');
+	})
+
+	$("body").on("click", ".catalog-filter__link", function(e){
+		e.preventDefault();
+		$(this).parents('.catalog-filter__item').find('.catalog-filter__link').removeClass('active');
+		$(this).toggleClass('active');
+	})
+
+
+
+
+	//UI-RANGE-SLIDER
+	if ($( ".range-sl" ).length>0) {
+		$( ".range-sl" ).slider({
+			range: true,
+			min: 0,
+			max: 4550,
+			values: [ 500, 2000 ],
+			slide: function( event, ui ) {
+				$( ".range-show" ).text(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+				//$(ui.handle).find('span').html('$' + ui.value);
+			}
+		});
+			$( ".range-show" ).text( $( ".range-sl" ).slider( "values", 0 ) +
+			" - " + $(".range-sl" ).slider( "values", 1 ) );
 	}
 });
 

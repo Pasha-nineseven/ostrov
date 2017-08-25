@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="27px" viewBox="0 0 17 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>svg/arrow_left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Макеты" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="volshebnij_ostrov_index_02" transform="translate(-50.000000, -947.000000)" fill="#FFC107">
+            <g id="Популярное-сегодня" transform="translate(49.000000, 724.000000)">
+                <path d="M10.0883246,240.861423 L10.0883246,229.172525 C10.0883246,227.520118 8.77904127,226.239592 7.16395847,226.239592 C5.5376156,226.239592 4.23959236,227.552711 4.23959236,229.172525 L4.23959236,243.777223 C4.23959236,244.597528 4.56671649,245.327476 5.09582548,245.85506 C5.62785252,246.391129 6.35781255,246.710155 7.16395847,246.710155 L21.7772226,246.710155 C23.4296297,246.710155 24.7101551,245.400872 24.7101551,243.785789 C24.7101551,242.159446 23.3970365,240.861423 21.7772226,240.861423 L10.0883246,240.861423 Z" id="svg/arrow_left" transform="translate(14.474874, 236.474874) scale(1, -1) rotate(45.000000) translate(-14.474874, -236.474874) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
