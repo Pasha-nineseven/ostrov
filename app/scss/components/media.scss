@@ -39,6 +39,15 @@
 	}
 }
 
+@media screen and (max-width: 1150px){
+	.similar__info, .catalog__info {
+	    bottom: 8px;
+	}
+	.similar__title, .catalog__title {
+	    margin-bottom: 30px;
+	}
+}
+
 @media screen and (max-width: 1100px){
 	.top-nav {
 	    float: none;
@@ -73,6 +82,59 @@
 	.page-aside__list .page-aside__link {
 	    padding: 7px 10px 12px 0;
 	}
+	.order-method__title {
+	    font-size: 24px;
+	    margin-bottom: 15px;
+	}
+	.order .radio-item {
+	    margin-bottom: 15px;
+	    font-size: 14px;
+	}
+	.catalog__item {
+	    width: 50%;
+	}
+	.catalog-add {
+	    min-height: auto;
+	    min-width: 0;
+	    left: 0;
+	    top: 100%;
+	    margin-left: 0;
+	    padding: 0;
+	}
+	.catalog-add:before {
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    left: 0;
+	    top: -6px;
+	    background: #fff;
+	    width: 100%;
+	    height: 10px;
+	}
+	.catalog-add__inner {
+	    padding: 20px;
+	    opacity: 0;
+	    margin-right: 0;
+	}
+	.catalog__item:nth-child(3n+3) .catalog-add {
+	    left: 0;
+	    right: 0;
+	    &:before {
+		    content: "";
+		    display: block;
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: -6px;
+		    background: #fff;
+		    width: 100%;
+		    height: 10px;
+		}
+	}
+	.catalog {
+	    // margin-right: 0;
+	    overflow: visible;
+	}
 }
 
 @media screen and (max-width: 1000px){
@@ -88,18 +150,64 @@
 	.download-item {
 	    font-size: 16px;
 	}
+	.partners__item {
+	    padding: 10px;
+	}
+	.partners__title {
+	    font-size: 18px;
+	}
+	.partners__address,
+	.partners__phone{
+	    font-size: 14px;
+	}
+	.cart-img__link {
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+	.workarea .order .cart-table {
+	    table-layout: inherit;
+	}
+	.cart-title {
+	    display: inline-block;
+	    max-width: 300px;
+	}
+	.product__inner {
+	    padding: 20px;
+	}
+	.product-slider-wrap {
+	    padding: 0;
+	    margin-bottom: 20px;
+	}
+	.product-info {
+	    padding: 0;
+	}
 }
 
 @media screen and (max-width: 900px){
 	.page-header__links a {
-	    text-indent: -9999em;
-	    padding-left: 32px;
+		text-indent: -9999em;
+		padding-left: 0;
+		width: 32px;
+		height: 32px;
+		margin-top: 5px;
+	    span{
+	    	display: none;
+	    }
 	}
 	.page-header__search {
 	    padding-right: 20px;
 	}
 	.similar__item, .catalog__item {
 	    width: 50%;
+	}
+	.order-method__item{
+	    width: 100%;
+	    padding-right: 0;
+	    margin-bottom: 20px;
+	}
+	.order-method__title {
+	    font-size: 20px;
+	    margin-bottom: 5px;
 	}
 }
 
@@ -320,6 +428,54 @@
 	.cabinet__inner {
 	    padding: 25px 10px;
 	}
+
+	.partners__list{
+		width: 100%;
+		background: #fff;
+		z-index: 5;
+		height: 200px;
+		margin-bottom: 20px;
+		float: none;
+		overflow: hidden;
+	}
+	.partners{
+		height: auto;
+	}
+	.partners__map{
+		height: 300px;
+	}
+	.workarea .order .cart-table td {
+	    padding: 11px 0;
+	}
+	.workarea .order .cart-table td:before{
+		text-transform: none;
+		font-weight: normal;
+		padding-right: 20px;
+		color: #8f8f8f;
+		font-size: 16px;
+	}
+	.workarea .order .cart-table td {
+	    text-align: right!important;
+	}
+	.cart-img__wrap {
+	    display: inline-block;
+	}
+	.cart-title {
+		max-width: inherit;
+		padding: 0;
+		clear: right;
+		display: block;
+	}
+	.cart-img__link {
+	    float: right;
+	    margin-bottom: 10px;
+	}
+	.issue-order input[type="submit"] {
+	    font-size: 18px;
+	    padding: 10px 25px;
+	    margin-right: 10px;
+	        margin-bottom: 20px;
+	}
 }
 
 @media screen and (max-width: 700px){
@@ -330,6 +486,7 @@
 	.slider-default__item {
 	    height: 300px;
 	}
+
 }
 
 @media screen and (max-width: 600px){
@@ -388,6 +545,46 @@
 	}
 	.workarea td, .workarea th {
 	    padding: 11px 0 13px 0;
+	}
+	.product__item {
+	    height: 300px;
+	}
+	.product__thumb-wrap{
+		.slick-list{
+			padding: 0!important;
+		}
+	}
+	.product__thumb-item {
+	    padding-right: 10px;
+	}
+	.top-info {
+	    padding-left: 0;
+	    margin-right: 0;
+	}
+	.top-logo {
+	    width: 141px;
+	    height: 46px;
+	    background-size: contain;
+	    margin-top: 5px;
+	}
+	.dream-group{
+		margin-right: 0;
+	}
+	.product-info__sum {
+	    float: none;
+	}
+	.product-info__price .btn-cart {
+	    float: none;
+	    margin: 10px 0 20px;
+	}
+	.product-info__count {
+	    text-align: left;
+	    padding: 0;
+	    margin-bottom: 10px;
+	}
+	.product-info__message {
+	    float: none;
+	    margin-bottom: 15px;
 	}
 }
 

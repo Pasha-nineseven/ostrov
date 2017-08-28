@@ -21,6 +21,9 @@ $(document).ready(function() {
 	if ($(".page-header__catalog").length>0) {
 		$(".page-header__catalog").mCustomScrollbar();
 	}
+	if ($(".partners__list").length>0) {
+		$(".partners__list").mCustomScrollbar();
+	}
 
 	//ASIDE MENU
 	$("body").on("click", ".page-aside__item--submenu > .page-aside__link", function(e){
@@ -212,6 +215,7 @@ $(document).ready(function() {
 		$('.brands').masonry({
 			// options
 			itemSelector: '.brands__item',
+			originLeft: false,
 			//columnWidth: 200
 			// horizontalOrder: true,
 		});
@@ -394,7 +398,9 @@ $(document).ready(function() {
 			useTransform:true,
 			"accessibility": false,
 			dots:false,
-			arrows:true
+			arrows:true,
+			autoplay: true,
+  			autoplaySpeed: 2000,
   			// responsive: [
 			  //   {
 			  //     breakpoint: 901,
@@ -424,7 +430,7 @@ $(document).ready(function() {
 
 	$("body").on("click", ".catalog-filter__link", function(e){
 		e.preventDefault();
-		$(this).parents('.catalog-filter__item').find('.catalog-filter__link').removeClass('active');
+		// $(this).parents('.catalog-filter__item').find('.catalog-filter__link').removeClass('active');
 		$(this).toggleClass('active');
 	})
 
@@ -438,13 +444,119 @@ $(document).ready(function() {
 			min: 0,
 			max: 4550,
 			values: [ 500, 2000 ],
-			slide: function( event, ui ) {
-				$( ".range-show" ).text(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-				//$(ui.handle).find('span').html('$' + ui.value);
-			}
+			stop: function(event, ui) {
+		        $(".input-range-min").val($(".range-sl").slider("values",0));
+		        $(".input-range-max").val($(".range-sl").slider("values",1));
+		    },
+		    slide: function(event, ui){
+		        $(".input-range-min").val($(".range-sl").slider("values",0));
+		        $(".input-range-max").val($(".range-sl").slider("values",1));
+		    }
 		});
-			$( ".range-show" ).text( $( ".range-sl" ).slider( "values", 0 ) +
-			" - " + $(".range-sl" ).slider( "values", 1 ) );
+
+		$(".input-range-min").change(function(){
+		    var value1=$(".input-range-min").val();
+		    var value2=$(".input-range-max").val();
+		    if(parseInt(value1) > parseInt(value2)){
+		        value1 = value2;
+		        $(".input-range-min").val(value1);
+		    }
+		    $(".range-sl").slider("values",0,value1);    
+		});
+		$(".input-range-max").change(function(){
+		    var value1=$(".input-range-min").val();
+		    var value2=$(".input-range-max").val();
+		    //if (value2 > 1000) { value2 = 1000; $(".input-range-max").val(1000)}
+		    if(parseInt(value1) > parseInt(value2)){
+		        value2 = value1;
+		        $(".input-range-max").val(value2);
+		    }
+		    $(".range-sl").slider("values",1,value2);
+	    });
+
+	}
+
+
+
+	//MAP
+	if ($('#map').length>0) {
+		bounds = new google.maps.LatLngBounds(), markers=[], alternateMarkers=[], markersIcon=[];
+		var mapOptions = {
+		    zoom: 0, //Set to 0 because we are using auto formatting w/ bounds
+		    zoomControl: true,
+		    mapTypeControl: false,
+	        navigationControl: false,
+	        scrollwheel: true,
+	        pancontrol:false,
+	        scaleControl: false,
+	        streetViewControl: false,
+	        disableDefaultUI:true,
+		};
+
+		map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		map.fitBounds(bounds);
+
+		$(".partners__item").each(function(index, element) {
+		    var markerLatLng = new google.maps.LatLng($(this).find(".object_lat").text(), $(this).find(".object_long").text());
+		    var markImg=new google.maps.MarkerImage('img/content/search-label.png');
+		    var altMarkImg=new google.maps.MarkerImage('img/content/search-label-or.png');
+
+	        var id=$(element).data('label');
+
+		    var marker = new google.maps.Marker({
+	    	    position: markerLatLng,
+	    	    map: map,
+	    	    icon: markImg,
+	            customInfo: id,
+		    });
+		    
+		    markers.push(marker);
+		    markersIcon.push(markImg);
+		    alternateMarkers.push(altMarkImg);
+		    //add to bounds for auto center and zoom
+		    bounds.extend(markerLatLng);
+
+	        google.maps.event.addListener(marker, "mouseover", function (e) {
+	            var curMarker = this;
+	            curMarker.setIcon(alternateMarkers[id]);
+	            var currentId = this.customInfo;
+	            //console.log(currentId);
+	            $(".partners__item").each(function(index, element) {
+	                var idOver = $(element).data('label');
+
+	                // var objDivPosition = $('div#' + clickedID)[0].offsetTop;
+
+	                
+
+	                //console.log(element);
+
+	                if (idOver === currentId){
+	                    $(this).addClass('active');
+	                }
+
+	                $(".partners__list").mCustomScrollbar("scrollTo", $(".partners__item.active"));
+	            });
+	        }); 
+	        google.maps.event.addListener(marker, "mouseout", function (e) {
+	            var curMarker = this;
+	            curMarker.setIcon(markersIcon[id]);
+	            var currentId = this.customInfo;
+	            $(".partners__item").each(function(index, element) {
+	                var idOver = $(element).data('label');
+	                if (idOver === currentId){
+	                    $(this).removeClass('active');
+	                }
+	            });
+	        });
+		});
+
+		$(".partners__item").on('mouseenter', function(){
+		    var id=$(this).data('label');
+		    markers[id].setIcon(alternateMarkers[id]);
+		}).on('mouseleave', function(){
+		    var id=$(this).data('label');
+		    markers[id].setIcon(markersIcon[id]);      
+		});
 	}
 });
 
@@ -472,30 +584,6 @@ function screenClass() {
 	} 
 }
 
-// function validate() {
-//     var regExp =  /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-//     var userTxt = document.forms["feedback-form"]["user_txt"];
-//     var userMail = document.forms["feedback-form"]["user_email"];
-//     var valide = true;
-//     $(".input-wrap").removeClass('error-length').removeClass('error-mail');
-
-//     if (userTxt.value.length < 2) {
-//         valide = false;
-//         $(userTxt).closest(".input-wrap").addClass("error-length");
-//     }
-
-//     if (userMail.value.length < 2) {
-//         valide = false;
-//         $(userMail).closest(".input-wrap").addClass("error-length");
-//     }
-
-//     if (!regExp.test(userMail.value) && userMail.value.length >= 2) {
-//         valide = false;
-//         $(userMail).closest(".input-wrap").addClass("error-mail");
-//     }
-
-//     return valide;
-// }
 
 
 // links pages
@@ -522,6 +610,7 @@ $('body').append(
 		<li><a href="catalog2.html">Каталог2</a></li> \
 		<li><a href="order.html">Заказ</a></li> \
 		<li><a href="order2.html">Заказ 2</a></li> \
+		<li><a href="partners.html">Партнеры</a></li> \
 		<li><a href="page-404.html">404</a></li> \
 	</ol> \
 </div>');
