@@ -3400,7 +3400,7 @@ span.breadcrumbs__item{
 }
 
 .banners__in--blue-sqheme{
-	background: url(../img/content/banner-1.png) center 0 no-repeat;
+	background: #b3e6fd url(../img/content/banner-1.png) center 0 no-repeat;
 	background-size: cover;
 	text-align: left;
 	span{
@@ -3409,7 +3409,7 @@ span.breadcrumbs__item{
 }
 
 .banners__in--violet-sqheme{
-	background: url(../img/content/banner-2.png) center 10px no-repeat;
+	background: #d1c4ea url(../img/content/banner-2.png) center 10px no-repeat;
 	background-size: cover;
 	text-align: right;
 	span{
@@ -3472,6 +3472,7 @@ span.breadcrumbs__item{
 	height: 92px;
 	line-height: 92px;
 	vertical-align: middle;
+	padding: 0 15px;
 	img{
 		max-width: 100%;
 		height: auto;
