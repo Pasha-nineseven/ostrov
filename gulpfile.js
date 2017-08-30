@@ -37,6 +37,9 @@ gulp.task('scripts', function(){
         'app/libs/masonry/masonry.pkgd.js',
         'app/libs/jTruncate/jtruncate.js',
         'app/libs/m-scrollbar/jquery.mCustomScrollbar.js',
+        'app/libs/multiselect/fSelect.js',
+        'app/libs/eyes/jqeye.js',
+        'app/libs/sticky/sticky-kit.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

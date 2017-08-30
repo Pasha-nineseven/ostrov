@@ -182,3 +182,15 @@
 		background: url(../img/content/place.png) center no-repeat;
 	}
 }
+
+a.map-view{
+	color: #8f8f8f;
+	display: block!important;
+	&:hover{
+		color: #0095da; 
+	}
+}
+
+.mfp-close-btn-in .mfp-close:active{
+	top: 20px;
+}

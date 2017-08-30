@@ -24,17 +24,26 @@
 	}
 }
 
-button.mfp-close {
+.mfp-close{
+	padding: 0;
+	width: 18px;
+    height: 18px;
+    line-height: 18px;
+    right: 20px;
+    top: 20px;
+}
+
+button.mfp-close{
     width: 18px;
     height: 18px;
     line-height: 18px;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 0;
+    top: 0!important;
     text-decoration: none;
     text-align: center;
     opacity: 1;
-    padding: 0;
+    padding: 0!important;
     font-size: inherit;
     font-family: inherit;
     background: url(../img/svg/close.svg) no-repeat;
@@ -44,12 +53,12 @@ button.mfp-close {
     	opacity: 0.7;
     	transform: scale(1.5);
     }
+    &:active{
+    	top: 0!important;
+    }
 }
 
 
-.mfp-close:active {
-    top: 20px;
-}
 
 .popup-inline{
 	position: relative;
@@ -101,5 +110,53 @@ button.mfp-close {
 	text-align: center;
 	h2{
 
+	}
+}
+
+.mfp-iframe-holder .mfp-close {
+    text-indent: 100%;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0;
+    right: 0;
+    width: 18px;
+}
+
+.mfp-close:active {
+    top: -40px;
+}
+
+.mfp-iframe-scaler .mfp-close:active{
+	top: -40px!important;
+}
+
+#footer-map {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+
+.popup-inline{
+	button.mfp-close{
+		right: 20px;
+    	top: 20px !important;
+	}
+	
+}
+
+.popup-map{
+	position: relative;
+	background: #f3efe7;
+	padding: 0;
+	width: auto;
+	max-width: 900px;
+	margin: 20px auto;
+	border-radius: 5px;
+	box-shadow:         0px 10px 18px 0px rgba(0, 0, 0, 0.3);
+
+	button.mfp-close{
+		right: -40px;
 	}
 }
