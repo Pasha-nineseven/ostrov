@@ -40,6 +40,8 @@ gulp.task('scripts', function(){
         'app/libs/multiselect/fSelect.js',
         'app/libs/eyes/jqeye.js',
         'app/libs/sticky/sticky-kit.js',
+        'app/libs/restable/restables.min.js',
+        'app/libs/touch-punch/jquery.ui.touch-punch.min.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

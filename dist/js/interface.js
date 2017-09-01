@@ -73,9 +73,11 @@ $(document).ready(function() {
 
 
  	//TABS
-	$('.tabs').responsiveTabs({
-	    startCollapsed: 'accordion'
-	});
+ 	if ($('.tabs').length>0) {
+		$('.tabs').responsiveTabs({
+		    startCollapsed: 'accordion'
+		});
+	}
 
 	//POPUP-INLINE
 	$('.popup-inline-btn').magnificPopup({
@@ -238,23 +240,14 @@ $(document).ready(function() {
 			useTransform:true,
 			"accessibility": false,
 			dots:false,
-  			// responsive: [
-			  //   {
-			  //     breakpoint: 901,
-			  //     settings: {
-			  //       infinite: false,
-					// slidesToShow: 1,
-					// fade: true,
-					// lazyLoad: 'progressive',
-					// useTransform:true,
-					// "accessibility": false,
-					// nextArrow: $('.main-slider__right'),
-		  	// 		prevArrow: $('.main-slider__left'),
-		  	// 		dots:true,
-		  	// 		arrows:true,
-			  //     }
-			  //   },
-		   //  ]
+  			responsive: [
+			    {
+			      breakpoint: 700,
+			      settings: {
+		  			dots:true,
+			      }
+			    },
+		    ]
 		});
 	}
 
@@ -262,11 +255,8 @@ $(document).ready(function() {
 	//BRANDS-ITEM
 	if ($('.brands').length>0){
 		$('.brands').masonry({
-			// options
 			itemSelector: '.brands__item',
 			originLeft: true,
-			//columnWidth: 200
-			// horizontalOrder: true,
 		});
 	}
 
@@ -680,7 +670,7 @@ $(document).ready(function() {
 	
 	window_width = $( window ).width();
 	if (window_width < 768) {
-		$(".cart-total").trigger("sticky_kit:detach");
+		$(".cart-total-sticker").trigger("sticky_kit:detach");
 		$(".cabinet-manager").trigger("sticky_kit:detach");
 		$(".cabinet-manager").trigger("sticky_kit:detach");
 	}
@@ -694,6 +684,8 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).next('.btn-tooltip-info').fadeIn();
 	})
+
+
 });
 
 
@@ -705,7 +697,7 @@ $(window).resize(function () {
 	window_width = $( window ).width();
 
 	if (window_width < 768) {
-		$(".cart-total").trigger("sticky_kit:detach");
+		$(".cart-total-sticker").trigger("sticky_kit:detach");
 		$(".cabinet-manager").trigger("sticky_kit:detach");
 		$(".cabinet-manager").trigger("sticky_kit:detach");
 	}
@@ -720,7 +712,7 @@ $(window).resize(function () {
 
 // functions
 function make_sticky() {
-	$(".cart-total").stick_in_parent({
+	$(".cart-total-sticker").stick_in_parent({
 		offset_top: 10,
 	});
 	$(".cabinet-manager").stick_in_parent({

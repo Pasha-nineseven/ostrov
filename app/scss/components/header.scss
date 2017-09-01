@@ -21,6 +21,9 @@
 	text-decoration: none;
 	font-weight: normal;
 }
+h1.top-logo{
+	cursor: default;
+}
 
 .top-nav{
 	float: right;
@@ -444,6 +447,7 @@ span.page-header__cart{
     position: relative;
     display: none;
     z-index: 5;
+    margin-left: 20px;
 }
 
 .mobile-menu__link{
@@ -841,6 +845,7 @@ span.page-header__cart{
     margin-top: 10px;
 	box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.4);
 	z-index: 5;
+	display: block;
 	display: none;
 	
 }

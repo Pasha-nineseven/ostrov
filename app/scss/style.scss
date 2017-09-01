@@ -3029,7 +3029,42 @@ span.breadcrumbs__item{
 		opacity: 0.5;
 		pointer-events:none;
 	}
+	ul.slick-dots{
+		margin-bottom: 0;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		bottom: 20px;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			width: 20px;
+			height: 20px;
+			border: 2px solid #ffc107;
+			padding-left: 0;
+			margin: 10px;
+			border-radius: 50%;
+			background: #fff;
+			cursor: pointer;
+			transition:all 0.3s ease;
+			&:last-child{
+				margin-right: 0;
+			}
+			button{
+				display: none;
+			}
+			&:before{
+				display: none;
+			}
+			&.slick-active,
+			&:hover{
+				background: #ffc107;
+			}
+		}
+	}
 }
+
 
 .main-slider__img{
 	background-size: cover;
