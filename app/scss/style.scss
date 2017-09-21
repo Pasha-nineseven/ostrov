@@ -2553,7 +2553,8 @@ span.breadcrumbs__item{
     
 }
 
-.catalog-labels__item{
+.catalog-labels__item,
+.catalog-labels__select{
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 10px;
@@ -2565,6 +2566,21 @@ span.breadcrumbs__item{
 	    cursor: default;
 }
 
+
+.catalog-labels__select{
+	cursor: pointer;
+	padding-right: 14px;
+	color: #000;
+	transition:all 0.3s ease;
+	&:hover,
+	&.active{
+		background: #ffc107;
+		color: #000;
+	}
+	&.active{
+		pointer-events:none;
+	}
+}
 
 .catalog-labels__close{
 	display: inline-block;
@@ -2600,20 +2616,47 @@ span.breadcrumbs__item{
 }
 
 .catalog-filter-link{
-	width: 44px;
-	height: 44px;
-	background: #fff url(../img/svg/c-filter.svg) center no-repeat;
-	border-radius: 50%;
+	
 	margin-left: 21px;
 	display: inline-block;
 	vertical-align: middle;
 	// margin-top: -15px;
 	transition:all 0.3s ease;
+	&:before{
+		content: "";
+		width: 44px;
+		height: 44px;
+		background: #fff url(../img/svg/c-filter.svg) center no-repeat;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		// margin-top: -15px;
+		transition:all 0.3s ease;
+		margin-top: -17px;
+		margin-right: 3px;
+	}
 	&:hover{
 		opacity: 0.6;
+		span{
+			border-bottom: 1px dashed transparent;
+		}
+
 	}
 	&.active{
-		transform:rotate(-180deg);
+		&:before{
+			transform:rotate(-180deg);
+		}
+		
+	}
+	span{
+		font-size: 14px;
+		color: #000;
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: -20px;
+		font-weight: normal;
+		border-bottom: 1px dashed #ffc107;
+		transition: all 0.3s ease;
 	}
 }
 
@@ -3141,6 +3184,9 @@ span.breadcrumbs__item{
 	}
 	.slick-track{
 		padding-bottom: 15px;
+		display: flex;
+		min-width: 100%;
+		    justify-content: center;
 	}
 	.slick-arrow{
 		width: 17px;
@@ -3172,6 +3218,7 @@ span.breadcrumbs__item{
 	font-size: 16px;
 	width: 25%;
 	float: left;
+	display: flex!important;
 	&:hover{
 		.product__label{
 	    	span{
@@ -3365,11 +3412,17 @@ span.breadcrumbs__item{
 		right: -45px;
 		background: url(../img/svg/arrow_right.svg) no-repeat;
 	}
+	.slick-track{
+		display: flex;
+		min-width: 100%;
+		justify-content: center;
+	}
 }
 
 
 .benefits__item{
 	padding-right: 20px;
+	display: flex;
 }
 
 
@@ -3488,11 +3541,16 @@ span.breadcrumbs__item{
 		right: -45px;
 		background: url(../img/svg/arrow_right.svg) no-repeat;
 	}
+	.slick-track{
+		display: flex;
+		min-width: 100%;
+		justify-content: center;
+	}
 }
 
 .main-brends__item{
 	text-align: center;
-	display: block;
+	display: flex;
 	text-decoration: none;
 	transition:all 0.3s ease;
 	&:hover{
@@ -3598,6 +3656,13 @@ span.breadcrumbs__item{
 	margin-bottom: 25px;
 }
 
+.catalog-filter__item--half{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	margin-right: -4px;
+}
+
 .catalog-filter__title{
 	display: block;
 	color: #a7a7a7;
@@ -3610,7 +3675,7 @@ span.breadcrumbs__item{
 	vertical-align: middle;
 	border-radius: 15px;
 	color: #000!important;
-	padding: 4px 17px;
+	padding: 4px 10px;
 	transition:all 0.3s ease;
 	span{
 		border-bottom: 1px dashed #ffc107;
@@ -3713,6 +3778,28 @@ span.breadcrumbs__item{
 	width: 300px;
 }
 
+.catalog-filter__buttons{
+	margin-bottom: 40px;
+	text-align: right;
+	.btn{
+		margin-right: 20px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	input[type="reset"]{
+		background:transparent;
+		display: inline-block;
+		vertical-align: middle;
+		border: 0;
+		border-bottom: 1px dashed #ffc107;
+		transition: all 0.3s ease;
+		padding: 0;
+		&:hover{
+			border-bottom: 1px dashed transparent;
+		}
+	}
+}
 
 .range-show{
 	text-align: center;
@@ -3832,6 +3919,9 @@ span.breadcrumbs__item{
 	margin-bottom: 8px;
 	position: relative;
 	padding-left: 23px;
+	display: block;
+	text-decoration: none;
+	color: #000;
 	&:before{
 		content: "";
 		display: inline-block;
@@ -4225,6 +4315,18 @@ span.breadcrumbs__item{
 }
 
 
+.btn--re{
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -10px;
+}
+
+@media all and (-ms-high-contrast:none){
+	.cart-img__link { display:block } /* IE10 */
+	*::-ms-backdrop, .cart-img__link { display:block } /* IE11 */
+	.socials__item--inst i{height: 15px;}/* IE10 */
+	*::-ms-backdrop, .socials__item--inst i{ height: 15px;} /* IE11 */
+}
 
 @import "components/popup";
 

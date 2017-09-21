@@ -365,82 +365,101 @@
 			</div>
 			<div class="page-title">
 				<div class="container-fluid">
-					<h1>Каталог товаров <a href="#" class="catalog-filter-link"></a></h1>
+					<h1>Каталог товаров <a href="#" class="catalog-filter-link"><span>Фильтр</span></a></h1>
 					<div class="catalog-labels">
 						<div class="catalog-filter">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="catalog-filter__item">
-										<div class="catalog-filter__title">Для кого</div>
-										<div class="catalog-filter-wrap">
-											<a href="#" class="catalog-filter__link active"><span>Для всех</span></a>
-											<a href="#" class="catalog-filter__link"><span>Для мальчиков</span></a>
-											<a href="#" class="catalog-filter__link"><span>Для девочек</span></a>
+							<form action="#" method="post">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="catalog-filter__item">
+											<div class="catalog-filter__title">Для кого</div>
+											<div class="catalog-filter-wrap">
+												<a href="#" class="catalog-filter__link active"><span>Для всех</span></a>
+												<a href="#" class="catalog-filter__link"><span>Для мальчиков</span></a>
+												<a href="#" class="catalog-filter__link"><span>Для девочек</span></a>
+											</div>
 										</div>
-									</div>
-									<div class="catalog-filter__item">
-										<div class="catalog-filter__title">Цена, руб.</div>
-										<div class="catalog-filter-range">
-											<div class="range-sl"></div>
-											<div class="range-inputs">
-												<div class="input-range-min-wrap">
-													<div class="range-inputs__txt">от</div>
-													<input type="text" class="input-range-min" value="500">
-												</div>
-												<div class="input-range-max-wrap">
-													<div class="range-inputs__txt">до</div>
-													<input type="text" class="input-range-max" value="2000">
+										<div class="catalog-filter__item">
+											<div class="catalog-filter__title">Цена, руб.</div>
+											<div class="catalog-filter-range">
+												<div class="range-sl"></div>
+												<div class="range-inputs">
+													<div class="input-range-min-wrap">
+														<div class="range-inputs__txt">от</div>
+														<input type="text" class="input-range-min" value="500">
+													</div>
+													<div class="input-range-max-wrap">
+														<div class="range-inputs__txt">до</div>
+														<input type="text" class="input-range-max" value="2000">
+													</div>
 												</div>
 											</div>
 										</div>
+									</div>
+									<div class="col-md-8">
+										<div class="catalog-filter__item catalog-filter__item--half">
+											<div class="catalog-filter__title">Возраст</div>
+											<div class="catalog-filter-wrap">
+												<a href="#" class="catalog-filter__link active"><span>Любой</span></a>
+												<a href="#" class="catalog-filter__link"><span>0-3</span></a>
+												<a href="#" class="catalog-filter__link"><span>3-6</span></a>
+												<a href="#" class="catalog-filter__link"><span>6-12</span></a>
+												<a href="#" class="catalog-filter__link"><span>12-18</span></a>
+												<a href="#" class="catalog-filter__link"><span>от 18</span></a>
+											</div>
+										</div>
+										<div class="catalog-filter__item catalog-filter__item--half">
+											<div class="catalog-filter-composite">
+												<div class="catalog-filter__title">Сезон</div>
+												<div class="select-wrap">
+													<select class="mselect" multiple="multiple">
+														<option value="Бренд1">Лето</option>
+														<option value="Бренд2">Осень</option>
+														<option value="Бренд3">Зима</option>
+														<option value="Бренд4">Весна</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="catalog-filter__item">
+											<div class="catalog-filter-composite">
+												<div class="catalog-filter__title">Бренды</div>
+												<div class="select-wrap">
+													<select class="mselect" multiple="multiple">
+														<option value="Бренд1">Бренд1</option>
+														<option value="Бренд2">Бренд2</option>
+														<option value="Бренд3">Бренд3</option>
+														<option value="Бренд4">Бренд4</option>
+													</select>
+												</div>
+											</div>
+											<div class="catalog-filter-composite">
+												<div class="catalog-filter__title">Торговая марка</div>
+												<div class="select-wrap">
+													<select class="mselect" multiple="multiple">
+														<option value="Торговая марка1">Торговая марка1</option>
+														<option value="Торговая марка2">Торговая марка2</option>
+														<option value="Торговая марка3">Торговая марка3</option>
+														<option value="Торговая марка4">Торговая марка4</option>
+													</select>
+												</div>
+											</div>
+											<div class="catalog-filter-composite">
+												<div class="catalog-filter__title">Показать</div>
+												<div class="catalog-filter-wrap catalog-filter-wrap--show">
+													<a href="#" class="catalog-filter__link catalog-filter__link--new"><i></i><span>Новинка</span></a>
+													<a href="#" class="catalog-filter__link catalog-filter__link--sale"><i></i><span>Распродажа</span></a>
+													<a href="#" class="catalog-filter__link catalog-filter__link--hit active"><i></i><span>Хит</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 catalog-filter__buttons">
+										<input type="submit" class="btn" value="Применить">
+										<input type="reset" value="Сбросить">
 									</div>
 								</div>
-								<div class="col-md-8">
-									<div class="catalog-filter__item">
-										<div class="catalog-filter__title">Возраст</div>
-										<div class="catalog-filter-wrap">
-											<a href="#" class="catalog-filter__link active"><span>Любой</span></a>
-											<a href="#" class="catalog-filter__link"><span>0-3</span></a>
-											<a href="#" class="catalog-filter__link"><span>3-6</span></a>
-											<a href="#" class="catalog-filter__link"><span>6-12</span></a>
-											<a href="#" class="catalog-filter__link"><span>12-18</span></a>
-											<a href="#" class="catalog-filter__link"><span>от 18</span></a>
-										</div>
-									</div>
-									<div class="catalog-filter__item">
-										<div class="catalog-filter-composite">
-											<div class="catalog-filter__title">Бренды</div>
-											<div class="select-wrap">
-												<select class="mselect" multiple="multiple">
-													<option value="Бренд1">Бренд1</option>
-													<option value="Бренд2">Бренд2</option>
-													<option value="Бренд3">Бренд3</option>
-													<option value="Бренд4">Бренд4</option>
-												</select>
-											</div>
-										</div>
-										<div class="catalog-filter-composite">
-											<div class="catalog-filter__title">Сезон</div>
-											<div class="select-wrap">
-												<select class="mselect" multiple="multiple">
-													<option value="Бренд1">Лето</option>
-													<option value="Бренд2">Осень</option>
-													<option value="Бренд3">Зима</option>
-													<option value="Бренд4">Весна</option>
-												</select>
-											</div>
-										</div>
-										<div class="catalog-filter-composite">
-											<div class="catalog-filter__title">Показать</div>
-											<div class="catalog-filter-wrap catalog-filter-wrap--show">
-												<a href="#" class="catalog-filter__link catalog-filter__link--new"><i></i><span>Новинка</span></a>
-												<a href="#" class="catalog-filter__link catalog-filter__link--sale"><i></i><span>Распродажа</span></a>
-												<a href="#" class="catalog-filter__link catalog-filter__link--hit active"><i></i><span>Хит</span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							</form>
 						</div>
 						<div class="catalog-labels-wrap">
 							<div class="catalog-labels__item">
@@ -545,7 +564,7 @@
 										</div>
 										<div class="catalog-sort__links-wrap">
 											Сортировать по: 
-											<span class="desc">Цене</span>
+											<a href="#" class="desc price-toggle">Цене</a>
 											<a href="#">Артикулу</a>
 											<a href="#">Названию</a>	
 										</div>

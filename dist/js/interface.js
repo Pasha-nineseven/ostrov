@@ -240,6 +240,8 @@ $(document).ready(function() {
 			useTransform:true,
 			"accessibility": false,
 			dots:false,
+			autoplay: true,
+  			autoplaySpeed: 7000,
   			responsive: [
 			    {
 			      breakpoint: 700,
@@ -450,8 +452,8 @@ $(document).ready(function() {
 			"accessibility": false,
 			dots:false,
 			arrows:true,
-			// autoplay: true,
-  	// 		autoplaySpeed: 2000,
+			autoplay: true,
+  			autoplaySpeed: 2000,
   			responsive: [
 			    {
 			      breakpoint: 1150,
@@ -588,10 +590,14 @@ $(document).ready(function() {
 		    bounds.extend(markerLatLng);
 
 	        google.maps.event.addListener(marker, "mouseover", function (e) {
+	        	for (var i = 0; i < markers.length; i++) {
+					markers[i].setIcon(markersIcon[i]);
+				};
 	            var curMarker = this;
 	            curMarker.setIcon(alternateMarkers[id]);
 	            var currentId = this.customInfo;
 	            //console.log(currentId);
+	            $(".partners__item").removeClass('active');
 	            $(".partners__item").each(function(index, element) {
 	                var idOver = $(element).data('label');
 
@@ -602,26 +608,48 @@ $(document).ready(function() {
 	                $(".partners__list").mCustomScrollbar("scrollTo", $(".partners__item.active"));
 	            });
 	        }); 
-	        google.maps.event.addListener(marker, "mouseout", function (e) {
-	            var curMarker = this;
-	            curMarker.setIcon(markersIcon[id]);
-	            var currentId = this.customInfo;
-	            $(".partners__item").each(function(index, element) {
-	                var idOver = $(element).data('label');
-	                if (idOver === currentId){
-	                    $(this).removeClass('active');
-	                }
-	            });
-	        });
+	        // google.maps.event.addListener(marker, "mouseout", function (e) {
+	        //     var curMarker = this;
+	        //     curMarker.setIcon(markersIcon[id]);
+	        //     var currentId = this.customInfo;
+	        //     $(".partners__item").each(function(index, element) {
+	        //         var idOver = $(element).data('label');
+	        //         if (idOver === currentId){
+	        //             $(this).removeClass('active');
+	        //         }
+	        //     });
+	        // });
+
 		});
 
-		$(".partners__item").on('mouseenter', function(){
-		    var id=$(this).data('label');
-		    markers[id].setIcon(alternateMarkers[id]);
-		}).on('mouseleave', function(){
-		    var id=$(this).data('label');
-		    markers[id].setIcon(markersIcon[id]);      
+
+		$(".partners__address").on('click', function(e){
+			e.preventDefault();
+
+			var markImg=new google.maps.MarkerImage('img/content/search-label.png');
+		    var altMarkImg=new google.maps.MarkerImage('img/content/search-label-or.png');
+
+			$('.partners__item').removeClass('active');
+			$(this).parents('.partners__item').addClass('active');
+			var id_alt=$(this).parents('.partners__item').data('label');
+	
+			for (var i = 0; i < markers.length; i++) {
+				markers[i].setIcon(markersIcon[i]);
+			};
+			markers[id_alt].setIcon(alternateMarkers[id_alt]); 
+	
+
+			map.panTo(markers[id_alt].position);
 		});
+
+
+		// $(".partners__item").on('mouseenter', function(){
+		//     var id=$(this).data('label');
+		//     markers[id].setIcon(alternateMarkers[id]);
+		// }).on('mouseleave', function(){
+		//     var id=$(this).data('label');
+		//     markers[id].setIcon(markersIcon[id]);      
+		// });
 	}
 
 	if ($('.mselect').length>0) {
@@ -685,7 +713,11 @@ $(document).ready(function() {
 		$(this).next('.btn-tooltip-info').fadeIn();
 	})
 
-
+	//PRICE-TOGGLE
+	$("body").on("click", ".price-toggle", function(e){
+		e.preventDefault();
+		$(this).toggleClass('desc asc');
+	})
 });
 
 
@@ -761,6 +793,7 @@ $('body').append(
 		<li><a href="product.html">Товар</a></li> \
 		<li><a href="catalog1.html">Каталог1</a></li> \
 		<li><a href="catalog2.html">Каталог2</a></li> \
+		<li><a href="catalog3.html">Каталог3</a></li> \
 		<li><a href="order.html">Заказ</a></li> \
 		<li><a href="order2.html">Заказ 2</a></li> \
 		<li><a href="partners.html">Партнеры</a></li> \
