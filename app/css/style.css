@@ -897,11 +897,25 @@ h1.top-logo {
   -webkit-border-top-right-radius: 0;
           border-top-right-radius: 0;
   display: none; }
+  .top-nav-submenu:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid #fff;
+    border-top: 0;
+    top: 0;
+    left: -2px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box; }
 
 .top-nav-submenu__item {
   margin-bottom: 10px;
   display: block;
-  font-size: 13px; }
+  font-size: 13px;
+  position: relative;
+  z-index: 5; }
   .top-nav-submenu__item:last-child {
     margin-bottom: 0; }
 
@@ -3751,7 +3765,9 @@ input[type="email"],
     font-weight: normal;
     border-bottom: 1px dashed #ffc107;
     -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
+    transition: all 0.3s ease;
+    font-family: "Lato", sans-serif;
+    margin-left: 5px; }
 
 .catalog-sort__search {
   float: left;
@@ -4393,36 +4409,25 @@ input[type="email"],
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding-bottom: 33px; }
+  padding-bottom: 33px;
+  margin-top: 30px; }
 
 .banners__item {
   padding-right: 20px;
   float: left;
-  width: 50%;
-  padding-top: 35px;
-  padding-bottom: 15px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  width: 50%; }
   .banners__item:hover .banners__in {
     opacity: 0.8; }
 
 .banners__in {
   display: block;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  padding: 75px 35px 91px;
-  font-size: 36px;
-  color: #000 !important;
-  font-family: 'cera_round_pro_bold';
-  height: 100%;
-  line-height: 1.1;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  .banners__in span {
-    font-size: 48px;
-    line-height: 48px;
-    display: block;
-    margin-bottom: 5px; }
 
 .banners__in--blue-sqheme {
   background: #b3e6fd url(../img/content/banner-1.png) center 0 no-repeat;
