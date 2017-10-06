@@ -4135,7 +4135,9 @@ input[type="email"],
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 500px; }
+  height: 500px;
+  display: block;
+  width: 100%; }
 
 .main-slider__info {
   background: #fff url(../img/svg/m-bg.svg) repeat;
@@ -4429,19 +4431,30 @@ input[type="email"],
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-.banners__in--blue-sqheme {
-  background: #b3e6fd url(../img/content/banner-1.png) center 0 no-repeat;
-  background-size: cover;
+.banners__item--blue-sqheme {
   text-align: left; }
-  .banners__in--blue-sqheme span {
+  .banners__item--blue-sqheme .banners__txt {
+    padding-left: 40px; }
+  .banners__item--blue-sqheme span {
     color: #00a6e0; }
 
-.banners__in--violet-sqheme {
-  background: #d1c4ea url(../img/content/banner-2.png) center 10px no-repeat;
-  background-size: cover;
+.banners__item--violet-sqheme {
   text-align: right; }
-  .banners__in--violet-sqheme span {
+  .banners__item--violet-sqheme .banners__txt {
+    padding-right: 40px; }
+  .banners__item--violet-sqheme span {
     color: #af72ce; }
+
+.banners__txt {
+  color: #000;
+  font-size: 36px;
+  font-family: 'cera_round_pro_bold';
+  max-width: 370px;
+  display: inline-block;
+  padding-top: 45px; }
+  .banners__txt span {
+    font-size: 48px;
+    display: block; }
 
 .main-brends {
   background: #fff;
@@ -6220,7 +6233,11 @@ a.map-view {
   .product-info__price .btn-tooltip-wrap {
     float: none; }
   .popup-inline {
-    padding: 20px; } }
+    padding: 20px; }
+  .banners__item--blue-sqheme .banners__txt {
+    padding-left: 0; }
+  .banners__item--violet-sqheme .banners__txt {
+    padding-right: 0; } }
 
 @media screen and (max-width: 550px) {
   .img-list__item {

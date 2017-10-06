@@ -14,11 +14,11 @@
 
 @font-face {
     font-family: 'cera_round_pro_bold';
-    src: url('../fonts/CeraRoundPro/CeraRoundPro-bold/CeraRoundPro-Bold.eot');
-    src: url('../fonts/CeraRoundPro/CeraRoundPro-bold/CeraRoundPro-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/CeraRoundPro/CeraRoundPro-bold/CeraRoundPro-Bold.woff') format('woff'),
-         url('../fonts/CeraRoundPro/CeraRoundPro-bold/CeraRoundPro-Bold.ttf') format('truetype'),
-         url('../fonts/CeraRoundPro/CeraRoundPro-bold/CeraRoundPro-Bold.svg#CeraRoundPro-Bold') format('svg');
+    src: url('../fonts/ceraroundpro/ceraroundpro-bold/ceraroundpro-bold.eot');
+    src: url('../fonts/ceraroundpro/ceraroundpro-bold/ceraroundpro-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ceraroundpro/ceraroundpro-bold/ceraroundpro-bold.woff') format('woff'),
+         url('../fonts/ceraroundpro/ceraroundpro-bold/ceraroundpro-bold.ttf') format('truetype'),
+         url('../fonts/ceraroundpro/ceraroundpro-bold/ceraroundpro-bold.svg#ceraroundpro-bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -1121,7 +1121,7 @@ span.breadcrumbs__item{
 	vertical-align: middle;
 	margin-bottom: 13px;
 	margin-right: 13px;
-	border-radius: 30px;
+	border-radius: 35px;
 	border: 1px solid transparent;
 	transition:all 0.3s ease;
 	font-size: 16px;
@@ -3116,6 +3116,8 @@ span.breadcrumbs__item{
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 500px;
+	display: block;
+	width: 100%;
 }
 
 .main-slider__info{
@@ -3480,21 +3482,37 @@ span.breadcrumbs__item{
 	transition:all 0.3s ease;
 }
 
-.banners__in--blue-sqheme{
-	background: #b3e6fd url(../img/content/banner-1.png) center 0 no-repeat;
-	background-size: cover;
+.banners__item--blue-sqheme{
 	text-align: left;
+	.banners__txt{
+		padding-left: 40px;
+	}
+	
 	span{
 		color: #00a6e0;
 	}
 }
 
-.banners__in--violet-sqheme{
-	background: #d1c4ea url(../img/content/banner-2.png) center 10px no-repeat;
-	background-size: cover;
+.banners__item--violet-sqheme{
 	text-align: right;
+	.banners__txt{
+		padding-right: 40px;
+	}
 	span{
 		color: #af72ce;
+	}
+}
+
+.banners__txt{
+	color: #000;
+	font-size: 36px;
+	font-family: 'cera_round_pro_bold';
+	max-width: 370px;
+	display: inline-block;
+	    padding-top: 45px;
+	span{
+		font-size: 48px;
+		display: block;
 	}
 }
 

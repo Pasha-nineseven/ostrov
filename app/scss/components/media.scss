@@ -946,6 +946,12 @@
 	.popup-inline {
 	    padding: 20px;
 	}
+	.banners__item--blue-sqheme .banners__txt {
+	    padding-left: 0;
+	}
+	.banners__item--violet-sqheme .banners__txt {
+	    padding-right: 0;
+	}
 }
 
 @media screen and (max-width: 550px){
