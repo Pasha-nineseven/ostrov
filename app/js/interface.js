@@ -572,31 +572,41 @@ $(document).ready(function() {
 		$(".partners__item").each(function(index, element) {
 		    var markerLatLng = new google.maps.LatLng($(this).find(".object_lat").text(), $(this).find(".object_long").text());
 		    var markImg=new google.maps.MarkerImage('img/content/search-label.png');
+
+		    var redImg=new google.maps.MarkerImage('img/content/search-label-red.png');
 		    var altMarkImg=new google.maps.MarkerImage('img/content/search-label-or.png');
 
 	        var id=$(element).data('label');
 
+	        // if ($(this).data('label')==0){
+         //        $(this).addClass('active');
+         //    };
+
 		    var marker = new google.maps.Marker({
 	    	    position: markerLatLng,
 	    	    map: map,
-	    	    icon: markImg,
+	    	    icon: $(this).data('label')==0 ? redImg : markImg,
 	            customInfo: id,
 		    });
 		    
 		    markers.push(marker);
 		    markersIcon.push(markImg);
 		    alternateMarkers.push(altMarkImg);
+		    //alternateMarkers.push(redImg);
 		    //add to bounds for auto center and zoom
 		    bounds.extend(markerLatLng);
 
 	        google.maps.event.addListener(marker, "mouseover", function (e) {
-	        	for (var i = 0; i < markers.length; i++) {
+	        	for (var i = 1; i < markers.length; i++) {
 					markers[i].setIcon(markersIcon[i]);
 				};
 	            var curMarker = this;
 	            curMarker.setIcon(alternateMarkers[id]);
 	            var currentId = this.customInfo;
 	            //console.log(currentId);
+	            if (currentId==0) {
+	             	curMarker.setIcon(redImg);
+	            }
 	            $(".partners__item").removeClass('active');
 	            $(".partners__item").each(function(index, element) {
 	                var idOver = $(element).data('label');
@@ -608,18 +618,6 @@ $(document).ready(function() {
 	                $(".partners__list").mCustomScrollbar("scrollTo", $(".partners__item.active"));
 	            });
 	        }); 
-	        // google.maps.event.addListener(marker, "mouseout", function (e) {
-	        //     var curMarker = this;
-	        //     curMarker.setIcon(markersIcon[id]);
-	        //     var currentId = this.customInfo;
-	        //     $(".partners__item").each(function(index, element) {
-	        //         var idOver = $(element).data('label');
-	        //         if (idOver === currentId){
-	        //             $(this).removeClass('active');
-	        //         }
-	        //     });
-	        // });
-
 		});
 
 
@@ -628,6 +626,7 @@ $(document).ready(function() {
 
 			var markImg=new google.maps.MarkerImage('img/content/search-label.png');
 		    var altMarkImg=new google.maps.MarkerImage('img/content/search-label-or.png');
+		    var redImg=new google.maps.MarkerImage('img/content/search-label-red.png');
 
 			$('.partners__item').removeClass('active');
 			$(this).parents('.partners__item').addClass('active');
@@ -635,21 +634,20 @@ $(document).ready(function() {
 	
 			for (var i = 0; i < markers.length; i++) {
 				markers[i].setIcon(markersIcon[i]);
+				if (id_alt==0) {
+					map.panTo(markers[id_alt].position);
+	             	markers[0].setIcon(redImg);
+	            }
 			};
-			markers[id_alt].setIcon(alternateMarkers[id_alt]); 
-	
+			markers[id_alt].setIcon(alternateMarkers[id_alt]);
+			markers[0].setIcon(redImg);
 
+			// var curMarker = this;
+			// if (id_alt==0) {
+   //           	curMarker.setIcon(redImg);
+   //          }
 			map.panTo(markers[id_alt].position);
 		});
-
-
-		// $(".partners__item").on('mouseenter', function(){
-		//     var id=$(this).data('label');
-		//     markers[id].setIcon(alternateMarkers[id]);
-		// }).on('mouseleave', function(){
-		//     var id=$(this).data('label');
-		//     markers[id].setIcon(markersIcon[id]);      
-		// });
 	}
 
 	if ($('.mselect').length>0) {
